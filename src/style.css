@@ -1,0 +1,57 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f1d2b;
+  --muted: #6b6880;
+  --card: #f6f4fb;
+  --border: #e4e0f0;
+  --accent: #7c3aed;
+  --accent-fg: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14121c;
+    --fg: #ece9f5;
+    --muted: #a19cb8;
+    --card: #1d1a29;
+    --border: #2e2a40;
+    --accent: #a78bfa;
+    --accent-fg: #14121c;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 16px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; }
+.muted { color: var(--muted); }
+
+header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; padding: 24px 0; }
+header nav { display: flex; gap: 20px; }
+header a { text-decoration: none; }
+.logo { font-weight: 700; color: var(--fg); }
+
+.intro { padding: 32px 0 16px; }
+.intro h1 { font-size: 2.4rem; line-height: 1.2; margin: 0 0 8px; }
+.button { display: inline-block; padding: 8px 18px; border-radius: 8px; background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600; }
+
+h2 { margin-top: 48px; scroll-margin-top: 16px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.card { display: block; padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card); color: var(--fg); text-decoration: none; transition: border-color .15s, transform .15s; }
+.card:hover, .card:focus-visible { border-color: var(--accent); transform: translateY(-2px); }
+.card img { display: block; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
+.card h3 { margin: 0 0 4px; color: var(--accent); }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+.posts { list-style: none; padding: 0; }
+.posts li { padding: 6px 0; }
+.posts time { display: inline-block; min-width: 110px; font-size: .9rem; }
+
+footer { margin: 64px 0 32px; padding-top: 16px; border-top: 1px solid var(--border); font-size: .9rem; }

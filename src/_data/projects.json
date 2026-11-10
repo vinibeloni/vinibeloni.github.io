@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Projeto A",
+    "description": "Troque por uma frase sobre o projeto.",
+    "url": "https://github.com/vinibeloni",
+    "image": ""
+  },
+  {
+    "title": "Projeto B",
+    "description": "Imagens vão em src/img/ e entram aqui como /img/arquivo.png.",
+    "url": "https://github.com/vinibeloni",
+    "image": ""
+  },
+  {
+    "title": "Projeto C",
+    "description": "Edite src/_data/projects.json para adicionar ou remover cards.",
+    "url": "https://github.com/vinibeloni",
+    "image": ""
+  }
+]

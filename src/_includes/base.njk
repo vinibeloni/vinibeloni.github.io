@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}Vini Beloni</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="logo" href="/">Vini Beloni</a>
+    <nav>
+      <a href="/#projetos">Projetos</a>
+      <a href="/#posts">Posts</a>
+    </nav>
+  </header>
+  <main>
+    {% if title and page.url != "/" %}
+      <h1>{{ title }}</h1>
+      {% if date %}<p class="muted">{{ page.date | date }}</p>{% endif %}
+    {% endif %}
+    {{ content | safe }}
+  </main>
+  <footer class="muted">Vini Beloni · <a href="https://github.com/vinibeloni">GitHub</a></footer>
+</body>
+</html>
