@@ -1,29 +1,40 @@
 ---
-title: Produto de IA generativa para revisão de contratos
+title: IA generativa para cadastro automático de contratos
 date: 2025-02-01
-draft: true
+role: Tech Lead
+company: Niuco
+period: fev/2025 – nov/2026
 ---
 
-**Tech Lead — Niuco** · fev/2025 – nov/2026
-
-Liderei um produto de IA generativa construído com Amazon Bedrock e agentes especializados, que substituiu um processo manual de revisão para clientes de grande porte.
+Liderei o primeiro produto de IA generativa da empresa: um fluxo com Amazon Bedrock e agentes especializados que automatiza o cadastro de contratos de software na plataforma, um processo que antes era manual.
 
 ## Contexto
 
-<!-- Qual era o problema? Quem sofria com ele e por que valia resolver? -->
+O projeto nasceu para um cliente estratégico. Cada contrato de software precisava ser lido e cadastrado à mão na plataforma, campo a campo. O objetivo era que a IA fizesse esse trabalho, com uma qualidade que desse para confiar.
 
 ## Como foi
 
-<!-- O que você construiu, as decisões de arquitetura, a stack e o seu papel no time. -->
+Eu arquitetei a solução, dividi e deleguei as tarefas e também desenvolvi. O time era pequeno: eu e um desenvolvedor júnior.
+
+A decisão central foi separar o que é trabalho de código do que é trabalho de IA. Tudo o que tem regra clara ficou no código, como escolher quais anexos do contrato entram na análise. Para o modelo ficou só o que exige interpretação, como identificar o tipo de pagamento. Isso deixa o resultado mais previsível e o prompt menor.
 
 ## Desafios
 
-<!-- O que deu errado ou foi difícil, e como vocês contornaram. -->
+O maior desafio foi refinar os prompts até a resposta ficar confiável.
+
+Montei um gabarito: um conjunto de contratos com o cadastro correto, já revisado por pessoas. Analisando amostras desse gabarito, decidi o que tirar da IA e passar para o código, e onde o prompt precisava melhorar.
+
+Para cada mudança no prompt ou no código, eu rodava um script com uma bateria de testes automatizados contra o gabarito, para ver se a mudança trazia ganho de verdade ou só parecia melhor. Usando o Claude Code (Opus 5.5), eu registrava as diferenças entre uma rodada e outra e o que mudar na seguinte. Assim cada ajuste era medido, não decidido no feeling.
 
 ## Resultado
 
-- 1.700 contratos no lançamento para um cliente estratégico.
+- Primeiro produto de IA da empresa, em produção.
+- 1.700 contratos no lançamento para o cliente estratégico.
 
 ## O que aprendi
 
-<!-- O que você levaria para o próximo projeto. -->
+Aprendi muito sobre Amazon Bedrock e sobre como gerenciar o contexto que vai para o modelo: o que mandar, o que deixar de fora e o que resolver antes, no código.
+
+Também aprendi que, com IA, o que dá segurança para evoluir é ter um gabarito e testes automatizados. Sem isso, cada mudança de prompt é um palpite.
+
+Reuni esses aprendizados em um artigo interno para o time.

@@ -2,9 +2,10 @@
 title: Integração com Active Directory para governança de identidade
 date: 2025-03-01
 draft: true
+role: Tech Lead
+company: Niuco
+period: fev/2025 – nov/2026
 ---
-
-**Tech Lead — Niuco** · fev/2025 – nov/2026
 
 Construí a integração end-to-end com Active Directory para a plataforma de governança de identidade (IGA), com foco em segurança.
 

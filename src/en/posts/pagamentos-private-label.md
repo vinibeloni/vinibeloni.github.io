@@ -2,9 +2,10 @@
 title: White-label payments platform
 date: 2019-12-01
 draft: true
+role: Tech Lead
+company: Stone (Cappta)
+period: Dec 2019 – Jun 2023
 ---
-
-**Tech Lead — Stone (Cappta)** · Dec 2019 – Jun 2023
 
 I led a team of 4 engineers on the private-label payments platform.
 

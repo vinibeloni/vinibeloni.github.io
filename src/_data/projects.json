@@ -1,8 +1,8 @@
 [
   {
     "slug": "ia-generativa-revisao-de-contratos",
-    "title": { "pt": "IA generativa para revisão de contratos", "en": "Generative AI for contract review" },
-    "description": { "pt": "Amazon Bedrock e agentes especializados no lugar de uma revisão manual. 1.700 contratos no lançamento.", "en": "Amazon Bedrock and specialized agents replacing a manual review. 1,700 contracts at launch." },
+    "title": { "pt": "IA generativa para cadastro de contratos", "en": "Generative AI for contract registration" },
+    "description": { "pt": "Primeiro produto de IA da empresa: Amazon Bedrock automatizando um cadastro manual. 1.700 contratos no lançamento.", "en": "The company's first AI product: Amazon Bedrock automating a manual registration. 1,700 contracts at launch." },
     "image": ""
   },
   {

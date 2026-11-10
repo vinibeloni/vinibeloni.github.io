@@ -6,13 +6,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} · {% endif %}Vini Beloni</title>
+  <title>{% if title %}{{ title }} · {% endif %}Vinícius Beloni</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="alternate" hreflang="{{ s.switchLang }}" href="{{ other }}">
 </head>
 <body>
   <header>
-    <a class="logo" href="{{ s.home }}">Vini Beloni</a>
+    <a class="logo" href="{{ s.home }}">Vinícius Beloni</a>
     <nav>
       <a href="{{ s.home }}#projects">{{ s.nav_projects }}</a>
       <a href="{{ s.home }}#posts">{{ s.nav_posts }}</a>
@@ -22,10 +22,10 @@
   <main{% if date %} class="prose"{% endif %}>
     {% if title %}
       <h1>{{ title }}</h1>
-      {% if date %}<p class="muted">{{ page.date | date(lang) }}</p>{% endif %}
+      {% if company %}<p class="muted">{{ role }} — {{ company }} · {{ period }}</p>{% endif %}
     {% endif %}
     {{ content | safe }}
   </main>
-  <footer class="muted">Vini Beloni · <a href="https://github.com/vinibeloni">GitHub</a> · <a href="https://linkedin.com/in/vinibeloni">LinkedIn</a></footer>
+  <footer class="muted">Vinícius Beloni · <a href="https://github.com/vinibeloni">GitHub</a> · <a href="https://linkedin.com/in/vinibeloni">LinkedIn</a></footer>
 </body>
 </html>

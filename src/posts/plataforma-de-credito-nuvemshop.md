@@ -2,9 +2,10 @@
 title: Plataforma de crédito da Nuvemshop no Brasil
 date: 2023-07-01
 draft: true
+role: Senior Software Engineer
+company: Nuvemshop
+period: jul/2023 – fev/2025
 ---
-
-**Senior Software Engineer — Nuvemshop** · jul/2023 – fev/2025
 
 Construí do zero, com o time, a plataforma de crédito no Brasil, e implementei observabilidade com Datadog para acompanhar o ciclo de vida das operações de crédito.
 

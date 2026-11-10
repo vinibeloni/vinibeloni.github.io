@@ -2,9 +2,10 @@
 title: Integrações com Pix e registradoras de recebíveis
 date: 2021-01-01
 draft: true
+role: Tech Lead
+company: Stone (Cappta)
+period: dez/2019 – jun/2023
 ---
-
-**Tech Lead — Stone (Cappta)** · dez/2019 – jun/2023
 
 Conduzi as integrações com Pix e com as registradoras de recebíveis.
 

@@ -2,9 +2,10 @@
 title: Plataforma de pagamentos white-label
 date: 2019-12-01
 draft: true
+role: Tech Lead
+company: Stone (Cappta)
+period: dez/2019 – jun/2023
 ---
-
-**Tech Lead — Stone (Cappta)** · dez/2019 – jun/2023
 
 Liderei um time de 4 engenheiros na plataforma de pagamentos private label.
 

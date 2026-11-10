@@ -2,9 +2,10 @@
 title: Nuvemshop's credit platform in Brazil
 date: 2023-07-01
 draft: true
+role: Senior Software Engineer
+company: Nuvemshop
+period: Jul 2023 – Feb 2025
 ---
-
-**Senior Software Engineer — Nuvemshop** · Jul 2023 – Feb 2025
 
 Together with the team, I built Nuvemshop's credit platform in Brazil from scratch, and set up Datadog observability to track the lifecycle of credit operations.
 

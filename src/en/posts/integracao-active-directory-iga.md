@@ -2,9 +2,10 @@
 title: Active Directory integration for identity governance
 date: 2025-03-01
 draft: true
+role: Tech Lead
+company: Niuco
+period: Feb 2025 – Nov 2026
 ---
-
-**Tech Lead — Niuco** · Feb 2025 – Nov 2026
 
 I built the end-to-end Active Directory integration for the identity governance and administration (IGA) platform, with a focus on security.
 
