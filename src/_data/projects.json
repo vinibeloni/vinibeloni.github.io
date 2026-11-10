@@ -2,7 +2,7 @@
   {
     "slug": "ia-generativa-revisao-de-contratos",
     "title": { "pt": "IA generativa para cadastro de contratos", "en": "Generative AI for contract registration" },
-    "description": { "pt": "Primeiro produto de IA da empresa: Amazon Bedrock automatizando um cadastro manual. Quase 2 mil contratos no lançamento.", "en": "The company's first AI product: Amazon Bedrock automating a manual registration. Nearly 2,000 contracts at launch." },
+    "description": { "pt": "Primeiro produto de IA da empresa: Amazon Bedrock tirando do analista a leitura de anexos no cadastro de contratos. Quase 2 mil contratos no lançamento.", "en": "The company's first AI product: Amazon Bedrock taking attachment reading off the analyst in contract registration. Nearly 2,000 contracts at launch." },
     "image": ""
   },
   {

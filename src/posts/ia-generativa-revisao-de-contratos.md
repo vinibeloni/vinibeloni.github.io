@@ -6,11 +6,11 @@ company: Niuco
 period: fev/2025 – nov/2026
 ---
 
-Liderei o primeiro produto de IA generativa da empresa: um fluxo com Amazon Bedrock e agentes especializados que automatiza o cadastro de contratos de software na plataforma, um processo que antes era manual.
+Liderei o primeiro produto de IA generativa da empresa: um fluxo com Amazon Bedrock e agentes especializados que tira do analista a leitura de anexos e notas no cadastro de contratos de software. O analista continua validando o resultado.
 
 ## Contexto
 
-O projeto nasceu para um cliente estratégico. Cada contrato de software precisava ser lido e cadastrado à mão na plataforma, campo a campo. O objetivo era que a IA fizesse esse trabalho, com uma qualidade que desse para confiar.
+O projeto nasceu para um cliente estratégico. Cada contrato de software precisava ser lido e cadastrado à mão na plataforma, campo a campo. O objetivo era que a IA fizesse a leitura e o preenchimento, e que o analista só revisasse, com uma qualidade que desse para confiar. Era um piloto, e o cliente sabia disso.
 
 ## Como foi
 
@@ -22,7 +22,19 @@ Cada parte fatiada passou por cerca de 10 refinamentos, num ciclo de refinar, pr
 
 A decisão central foi separar o que é trabalho de código do que é trabalho de IA. Tudo o que tem regra clara ficou no código, como escolher quais anexos do contrato entram na análise. Para o modelo ficou só o que exige interpretação, como identificar o tipo de pagamento. Isso deixa o resultado mais previsível e o prompt menor.
 
-Também cuidei da observabilidade: criei métricas e alertas e configurei um limite de budget na própria AWS, para o custo do modelo não sair do controle.
+O fluxo importa os contratos, com notas e anexos, e usa IA em três etapas:
+
+1. Encontrar o fornecedor cadastrado na plataforma que corresponde ao emissor do contrato.
+2. Encontrar o produto desse fornecedor.
+3. Preencher alguns campos do cadastro.
+
+O analista deixou de ler anexos e notas e passou a revisar o resultado. Se a IA erra, ele corrige.
+
+Para ajudar o analista a priorizar o que olhar, cada cadastro tem um score de confiança. O score é calculado por regras, como match exato do nome do fornecedor, match do produto e outras comparações. Ele não vem do próprio modelo porque a confiança que um LLM declara sobre a própria resposta não é confiável nem auditável.
+
+Também limitei onde o modelo pode errar. Todos os contratos de um emissor ficam no mesmo fornecedor. Depois que o analista confirma esse fornecedor uma vez, ele não muda mais, nem em contratos novos. A saída do LLM vira dado confirmado, e o mesmo erro não se repete. Produto e campos variam mais e continuam passando pelo modelo.
+
+Também cuidei da observabilidade: criei métricas e alertas e configurei um limite de budget na própria AWS, para o custo do modelo não sair do controle. O fluxo também tem logs de auditoria.
 
 ## Desafios
 
@@ -32,11 +44,20 @@ Montei um gabarito: um conjunto de contratos com o cadastro correto, já revisad
 
 Para cada mudança no prompt ou no código, eu rodava um script com uma bateria de testes automatizados contra o gabarito, para ver se a mudança trazia ganho de verdade ou só parecia melhor. Usando o Claude Code (Opus 5.5), eu registrava as diferenças entre uma rodada e outra e o que mudar na seguinte. Assim cada ajuste era medido, não decidido no feeling.
 
+## Trade-offs
+
+- **Humano no loop em vez de automação total:** é mais seguro para um piloto, mas ganha menos tempo.
+- **Regras em código e interpretação no modelo:** o resultado fica mais previsível e o prompt menor, mas tem mais código para manter.
+- **Score por regras em vez da autoavaliação do modelo:** é confiável e auditável, mas cobre só o que dá para comparar.
+- **Viés de automação:** com o tempo, o revisor tende a só aprovar. Para mitigar, dá para medir a taxa de "aprovado sem alteração" por faixa de score, o que também ajuda a calibrar o score. E dá para analisar qual etapa custa mais caro quando erra, para concentrar a revisão ali.
+
 ## Resultado
 
 - Primeiro produto de IA da empresa, em produção.
 - Quase 2 mil contratos no lançamento para o cliente estratégico.
 - Entregou a funcionalidade que o cliente mais cobrava.
+
+O objetivo nunca foi a IA acertar 100%. É errar menos que o processo manual, e de um jeito que dê para detectar.
 
 ## O que aprendi
 
