@@ -1,26 +1,31 @@
 <!doctype html>
-<html lang="pt-BR">
+{%- set s = t[lang] -%}
+{#- shortcut: o post em inglês usa o mesmo slug do português; se um slug divergir, o botão de idioma dá 404 -#}
+{%- if lang == "en" %}{% set other = page.url | replace("/en/", "/") %}{% else %}{% set other = "/en" + page.url %}{% endif %}
+<html lang="{{ s.htmlLang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if title %}{{ title }} · {% endif %}Vini Beloni</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" hreflang="{{ s.switchLang }}" href="{{ other }}">
 </head>
 <body>
   <header>
-    <a class="logo" href="/">Vini Beloni</a>
+    <a class="logo" href="{{ s.home }}">Vini Beloni</a>
     <nav>
-      <a href="/#projetos">Projetos</a>
-      <a href="/#posts">Posts</a>
+      <a href="{{ s.home }}#projects">{{ s.nav_projects }}</a>
+      <a href="{{ s.home }}#posts">{{ s.nav_posts }}</a>
+      <a href="{{ other }}" hreflang="{{ s.switchLang }}" lang="{{ s.switchLang }}">{{ s.switch }}</a>
     </nav>
   </header>
-  <main>
-    {% if title and page.url != "/" %}
+  <main{% if date %} class="prose"{% endif %}>
+    {% if title %}
       <h1>{{ title }}</h1>
-      {% if date %}<p class="muted">{{ page.date | date }}</p>{% endif %}
+      {% if date %}<p class="muted">{{ page.date | date(lang) }}</p>{% endif %}
     {% endif %}
     {{ content | safe }}
   </main>
-  <footer class="muted">Vini Beloni · <a href="https://github.com/vinibeloni">GitHub</a></footer>
+  <footer class="muted">Vini Beloni · <a href="https://github.com/vinibeloni">GitHub</a> · <a href="https://linkedin.com/in/vinibeloni">LinkedIn</a></footer>
 </body>
 </html>

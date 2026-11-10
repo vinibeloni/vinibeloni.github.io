@@ -1,0 +1,56 @@
+{
+  "pt": {
+    "htmlLang": "pt-BR",
+    "home": "/",
+    "posts": "post",
+    "nav_projects": "Projetos",
+    "nav_posts": "Posts",
+    "name": "Vinícius Beloni",
+    "role": "Software Engineer & Tech Lead · IA & LLM · Fintech",
+    "summary": "Tenho mais de 10 anos construindo sistemas backend em produção, 7+ em fintech, e histórico de liderança de times de engenharia. Meu foco hoje é liderar integrações com LLMs e workflows com IA.",
+    "highlights": [
+      "Liderei um produto de IA generativa com Amazon Bedrock e agentes especializados, substituindo um processo manual para clientes de grande porte",
+      "Criei skills e agentes com Claude Code adotados por praticamente todo o time de desenvolvimento, automatizando correção de bugs, deploy e code review",
+      "Liderei plataformas de pagamento com R$250M/mês em TPV e construí do zero uma plataforma de crédito com carteira de R$6M+",
+      "Defini padrões de engenharia e arquitetura junto ao CTO"
+    ],
+    "stack_label": "Stack",
+    "stack": "C#, .NET, AWS (Serverless, Bedrock), PostgreSQL, SQL Server, TypeScript, Node.js, NestJS",
+    "langs_label": "Idiomas",
+    "langs": "Português (nativo) · Inglês (B2)",
+    "open": "Aberto a oportunidades como Software Engineer, Tech Lead e AI Engineer.",
+    "cv_label": "Baixar CV",
+    "cv": "/files/vinicius-beloni-cv-pt.pdf",
+    "recent": "Posts recentes",
+    "empty": "Nenhum post ainda.",
+    "switch": "English",
+    "switchLang": "en"
+  },
+  "en": {
+    "htmlLang": "en",
+    "home": "/en/",
+    "posts": "post_en",
+    "nav_projects": "Projects",
+    "nav_posts": "Posts",
+    "name": "Vinícius Beloni",
+    "role": "Software Engineer & Tech Lead · AI & LLM · Fintech",
+    "summary": "Software engineer with 10+ years building production backend systems, 7+ in fintech, and a track record of leading engineering teams. Currently focused on leading LLM integrations and AI-powered workflows.",
+    "highlights": [
+      "Led a Generative AI product built with Amazon Bedrock and specialized agents, replacing a manual process for large clients",
+      "Built Claude Code skills and agents adopted by nearly the entire development team, automating bug fixing, deploys and code review",
+      "Led payment platforms processing R$250M/month in TPV and built a credit platform from the ground up, reaching a R$6M+ loan portfolio",
+      "Defined engineering and architecture standards together with the CTO"
+    ],
+    "stack_label": "Stack",
+    "stack": "C#, .NET, AWS (Serverless, Bedrock), PostgreSQL, SQL Server, TypeScript, Node.js, NestJS",
+    "langs_label": "Languages",
+    "langs": "Portuguese (native) · English (B2)",
+    "open": "Open to Software Engineer, Tech Lead and AI Engineer roles.",
+    "cv_label": "Download CV",
+    "cv": "/files/vinicius-beloni-cv-en.pdf",
+    "recent": "Recent posts",
+    "empty": "No posts yet.",
+    "switch": "Português",
+    "switchLang": "pt-BR"
+  }
+}

@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+{%- set s = t[lang] -%}
+<section class="intro">
+  <h1>{{ s.name }}</h1>
+  <p class="role">{{ s.role }}</p>
+  <p>{{ s.summary }}</p>
+  <ul class="highlights">
+    {% for h in s.highlights %}<li>{{ h }}</li>{% endfor %}
+  </ul>
+  <p><span class="muted">{{ s.stack_label }}:</span> {{ s.stack }}<br>
+     <span class="muted">{{ s.langs_label }}:</span> {{ s.langs }}</p>
+  <p class="open">{{ s.open }}</p>
+  <div class="actions">
+    <a class="button" href="{{ s.cv }}" download>{{ s.cv_label }}</a>
+    <a class="button" href="https://www.linkedin.com/in/vinibeloni">LinkedIn</a>
+    <a class="button" href="mailto:vinibelonicubas@gmail.com">E-mail</a>
+    <a class="button" href="https://github.com/vinibeloni">GitHub</a>
+  </div>
+</section>
+
+<h2 id="projects">{{ s.nav_projects }}</h2>
+<div class="grid">
+  {% for p in projects %}
+  {#- o card só vira link se o post do projeto já estiver publicado (rascunho não entra no build) -#}
+  {%- set href = "" -%}
+  {%- for post in collections[s.posts] %}{% if post.fileSlug == p.slug %}{% set href = post.url %}{% endif %}{% endfor -%}
+  <{{ "a" if href else "div" }} class="card"{% if href %} href="{{ href }}"{% endif %}>
+    {% if p.image %}<img src="{{ p.image }}" alt="">{% endif %}
+    <h3>{{ p.title[lang] }}</h3>
+    <p>{{ p.description[lang] }}</p>
+  </{{ "a" if href else "div" }}>
+  {% endfor %}
+</div>
+
+<h2 id="posts">{{ s.recent }}</h2>
+<ul class="posts">
+  {% for post in collections[s.posts] | reverse %}
+  <li><time class="muted">{{ post.date | date(lang) }}</time> <a href="{{ post.url }}">{{ post.data.title }}</a></li>
+  {% else %}
+  <li class="muted">{{ s.empty }}</li>
+  {% endfor %}
+</ul>

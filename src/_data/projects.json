@@ -1,20 +1,32 @@
 [
   {
-    "title": "Projeto A",
-    "description": "Troque por uma frase sobre o projeto.",
-    "url": "https://github.com/vinibeloni",
+    "slug": "ia-generativa-revisao-de-contratos",
+    "title": { "pt": "IA generativa para revisão de contratos", "en": "Generative AI for contract review" },
+    "description": { "pt": "Amazon Bedrock e agentes especializados no lugar de uma revisão manual. 1.700 contratos no lançamento.", "en": "Amazon Bedrock and specialized agents replacing a manual review. 1,700 contracts at launch." },
     "image": ""
   },
   {
-    "title": "Projeto B",
-    "description": "Imagens vão em src/img/ e entram aqui como /img/arquivo.png.",
-    "url": "https://github.com/vinibeloni",
+    "slug": "integracao-active-directory-iga",
+    "title": { "pt": "Integração com Active Directory", "en": "Active Directory integration" },
+    "description": { "pt": "Integração end-to-end para a plataforma de governança de identidade (IGA), com foco em segurança.", "en": "End-to-end integration for the identity governance (IGA) platform, security-first." },
     "image": ""
   },
   {
-    "title": "Projeto C",
-    "description": "Edite src/_data/projects.json para adicionar ou remover cards.",
-    "url": "https://github.com/vinibeloni",
+    "slug": "plataforma-de-credito-nuvemshop",
+    "title": { "pt": "Plataforma de crédito", "en": "Credit platform" },
+    "description": { "pt": "Construída do zero na Nuvemshop, com carteira de R$6M+.", "en": "Built from scratch at Nuvemshop, with a R$6M+ loan portfolio." },
+    "image": ""
+  },
+  {
+    "slug": "pix-e-registradoras",
+    "title": { "pt": "Pix e registradoras de recebíveis", "en": "Pix and receivables registrars" },
+    "description": { "pt": "Conduzi as integrações com Pix e com as registradoras de recebíveis na Stone (Cappta).", "en": "Drove the Pix and receivables registrar integrations at Stone (Cappta)." },
+    "image": ""
+  },
+  {
+    "slug": "pagamentos-private-label",
+    "title": { "pt": "Pagamentos white-label", "en": "White-label payments" },
+    "description": { "pt": "Liderei o time na Stone (Cappta), com TPV de R$250M+ por mês.", "en": "Led the team at Stone (Cappta), with R$250M+ in monthly TPV." },
     "image": ""
   }
 ]
