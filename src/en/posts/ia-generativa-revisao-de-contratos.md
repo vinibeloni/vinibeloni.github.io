@@ -16,7 +16,13 @@ The project started for a strategic client. Every software contract had to be re
 
 I designed the architecture, split and delegated the tasks, and also wrote code. The team was small: me and a junior developer.
 
+At the start, the product team showed me v1 of the Figma. Before planning, I questioned what had been presented and sliced the deliveries before development began. I also built a skill that helped break those slices into specs for GitHub's [Spec Kit](https://github.com/github/spec-kit), and then check the big picture.
+
+Each slice went through about 10 refinement rounds, in a cycle of refine, prioritize, drop or build, and validate the delivery, before moving on to the next round. It took 2 months of work.
+
 The key decision was separating what is a job for code from what is a job for AI. Anything with a clear rule stayed in code, such as choosing which contract attachments go into the analysis. The model only handled what needs interpretation, such as identifying the payment type. That makes the output more predictable and keeps the prompt smaller.
+
+I also took care of observability: I set up metrics and alerts, and a budget limit in AWS itself, to keep model costs under control.
 
 ## Challenges
 
@@ -30,6 +36,7 @@ For every change to a prompt or to the code, I ran a script with a suite of auto
 
 - The company's first AI product, running in production.
 - 1,700 contracts at launch for the strategic client.
+- Opened the way to a possible renewal with the client, who had named the lack of this feature as the main blocker.
 
 ## What I learned
 
