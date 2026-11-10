@@ -16,7 +16,7 @@ O projeto nasceu para um cliente estratégico. Cada contrato de software precisa
 
 Eu arquitetei a solução, dividi e deleguei as tarefas e também desenvolvi. O time era pequeno: eu e um desenvolvedor júnior.
 
-No início, o time de produto me mostrou a v1 do Figma. Antes do planejamento, questionei o que tinha sido apresentado e fatiei as entregas antes de começar o desenvolvimento. Também criei uma skill que ajudava a quebrar essas fatias em specs para o [Spec Kit](https://github.com/github/spec-kit), do GitHub, e depois a conferir a visão macro.
+No início, o time de produto me mostrou a v1 do Figma. Antes do planejamento, questionei o que tinha sido apresentado e fatiei as entregas antes de começar o desenvolvimento. Também criei uma skill que dimensionava a spec original e a quebrava em specs menores para o [Spec Kit](https://github.com/github/spec-kit), do GitHub, e depois ajudava a conferir a visão macro.
 
 Cada parte fatiada passou por cerca de 10 refinamentos, num ciclo de refinar, priorizar, descartar ou executar e validar a entrega, antes de seguir para o próximo refinamento. Foram 2 meses de trabalho.
 
@@ -35,8 +35,8 @@ Para cada mudança no prompt ou no código, eu rodava um script com uma bateria 
 ## Resultado
 
 - Primeiro produto de IA da empresa, em produção.
-- 1.700 contratos no lançamento para o cliente estratégico.
-- Abriu caminho para uma possível renovação com o cliente, que apontava a falta dessa feature como o principal ofensor.
+- Quase 2 mil contratos no lançamento para o cliente estratégico.
+- Entregou a funcionalidade que o cliente mais cobrava.
 
 ## O que aprendi
 

@@ -16,7 +16,7 @@ The project started for a strategic client. Every software contract had to be re
 
 I designed the architecture, split and delegated the tasks, and also wrote code. The team was small: me and a junior developer.
 
-At the start, the product team showed me v1 of the Figma. Before planning, I questioned what had been presented and sliced the deliveries before development began. I also built a skill that helped break those slices into specs for GitHub's [Spec Kit](https://github.com/github/spec-kit), and then check the big picture.
+At the start, the product team showed me v1 of the Figma. Before planning, I questioned what had been presented and sliced the deliveries before development began. I also built a skill that sized the original spec and broke it down into smaller specs for GitHub's [Spec Kit](https://github.com/github/spec-kit), and then helped check the big picture.
 
 Each slice went through about 10 refinement rounds, in a cycle of refine, prioritize, drop or build, and validate the delivery, before moving on to the next round. It took 2 months of work.
 
@@ -35,8 +35,8 @@ For every change to a prompt or to the code, I ran a script with a suite of auto
 ## Results
 
 - The company's first AI product, running in production.
-- 1,700 contracts at launch for the strategic client.
-- Opened the way to a possible renewal with the client, who had named the lack of this feature as the main blocker.
+- Nearly 2,000 contracts at launch for the strategic client.
+- Delivered the feature the client asked for most.
 
 ## What I learned
 
